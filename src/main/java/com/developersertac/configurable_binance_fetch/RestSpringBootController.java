@@ -30,11 +30,11 @@ public class RestSpringBootController {
 		String description = "";
 		String collectionName = symbol + "-" + interval;
 
-		String latestOpenPrice = getDocumentWithMaxValueOf(collectionName, "openTime", Sort.Direction.DESC).getOpen().toEngineeringString();
-		String lastOpenTime = dateFormat.format(new Date(getDocumentWithMaxValueOf(collectionName, "openTime", Sort.Direction.DESC).getOpenTime()));
-		String firstOpenTime = dateFormat.format(new Date(getDocumentWithMaxValueOf(collectionName, "openTime", Sort.Direction.ASC).getOpenTime()));
-		String minCloseValue = getDocumentWithMaxValueOf(collectionName, "close", Sort.Direction.ASC).getClose().toEngineeringString();
-		String maxCloseValue = getDocumentWithMaxValueOf(collectionName, "close", Sort.Direction.DESC).getClose().toEngineeringString();
+		String latestOpenPrice = getFirstDocumentSortedBy(collectionName, "openTime", Sort.Direction.DESC).getOpen().toEngineeringString();
+		String lastOpenTime = dateFormat.format(new Date(getFirstDocumentSortedBy(collectionName, "openTime", Sort.Direction.DESC).getOpenTime()));
+		String firstOpenTime = dateFormat.format(new Date(getFirstDocumentSortedBy(collectionName, "openTime", Sort.Direction.ASC).getOpenTime()));
+		String minCloseValue = getFirstDocumentSortedBy(collectionName, "close", Sort.Direction.ASC).getClose().toEngineeringString();
+		String maxCloseValue = getFirstDocumentSortedBy(collectionName, "close", Sort.Direction.DESC).getClose().toEngineeringString();
 		String klineCount = String.valueOf(mongoOps.getCollection(collectionName).countDocuments());
 
 		description += "<h2>" + symbol + " Parity Statistics for " + interval + " interval</h2>";
@@ -50,7 +50,7 @@ public class RestSpringBootController {
 		return description;
 	}
 	
-	public BinanceKline getDocumentWithMaxValueOf(String collectionName, String key, Direction sort) {
+	public BinanceKline getFirstDocumentSortedBy(String collectionName, String key, Direction sort) {
 		
 		if (mongoOps.getCollection(collectionName).countDocuments() > 0) {
 		
