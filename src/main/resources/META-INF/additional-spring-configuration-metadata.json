@@ -1,0 +1,82 @@
+{"properties": [
+  {
+    "name": "binance.base-endpoint",
+    "type": "java.lang.String",
+    "description": "A description for 'binance.baseEndpoint'"
+  },
+  {
+    "name": "binance.klines-endpoint",
+    "type": "java.lang.String",
+    "description": "A description for 'binance.klinesEndpoint'"
+  },
+  {
+    "name": "binance.time-endpoint",
+    "type": "java.lang.String",
+    "description": "A description for 'binance.timeEndpoint'"
+  },
+  {
+    "name": "binance.exchangeinfo-endpoint",
+    "type": "java.lang.String",
+    "description": "A description for 'binance.exchangeinfo-endpoint'"
+  },
+  {
+    "name": "binance.limit",
+    "type": "java.lang.String",
+    "description": "A description for 'binance.limit'"
+  },
+  {
+    "name": "cron.expression",
+    "type": "java.lang.String",
+    "description": "A description for 'cron.expression'"
+  },
+  {
+    "name": "parity.selector",
+    "type": "java.lang.String",
+    "description": "A description for 'parity.selector'"
+  },
+  {
+    "name": "parity.base",
+    "type": "java.lang.String",
+    "description": "A description for 'parity.base'"
+  },
+  {
+    "name": "parity.symbols",
+    "type": "java.lang.String",
+    "description": "A description for 'parity.symbols'"
+  },
+  {
+    "name": "parity.intervals",
+    "type": "java.lang.String",
+    "description": "A description for 'parity.intervals'"
+  },
+  {
+    "name": "parity.blacklist",
+    "type": "java.lang.String",
+    "description": "A description for 'parity.blacklist'"
+  },
+  {
+    "name": "parity.info[0]",
+    "type": "java.lang.String",
+    "description": "A description for 'parity.info[0]'"
+  },
+  {
+    "name": "parity.info[1]",
+    "type": "java.lang.String",
+    "description": "A description for 'parity.info[1]'"
+  },
+  {
+    "name": "flow.first-fetch-all-insert-later",
+    "type": "java.lang.String",
+    "description": "A description for 'flow.first-fetch-all-insert-later'"
+  },
+  {
+    "name": "flow.logging-on",
+    "type": "java.lang.String",
+    "description": "A description for 'flow.logging-on'"
+  },
+  {
+    "name": "flow.delete-before-insert",
+    "type": "java.lang.String",
+    "description": "A description for 'flow.delete-before-insert'"
+  }
+]}
